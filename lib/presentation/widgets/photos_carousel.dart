@@ -1,5 +1,4 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../data/models/photo.dart';
 
@@ -11,8 +10,9 @@ class PhotosCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
-        height: 200,
+        height: 400,
         autoPlay: true,
+        autoPlayInterval: Duration(seconds: 3),
         enlargeCenterPage: true 
       ),
       items: photos.map((photo) {

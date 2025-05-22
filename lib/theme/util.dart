@@ -12,7 +12,7 @@ TextTheme createTextTheme(
       GoogleFonts.getTextTheme(displayFontString, baseTextTheme);
   TextTheme textTheme = displayTextTheme.copyWith(
     titleMedium: TextStyle(
-      fontSize: 18,
+      fontSize: 20,
       fontFamily: displayTextTheme.bodyLarge?.fontFamily,
       fontWeight: FontWeight.bold,
       height: 1.2,

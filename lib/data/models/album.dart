@@ -1,4 +1,3 @@
-import 'package:flutter/rendering.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'album.g.dart';

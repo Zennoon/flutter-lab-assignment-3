@@ -1,3 +1,4 @@
+import 'package:albums/logic/albums/album_event.dart';
 import 'package:albums/presentation/widgets/album_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,7 +34,24 @@ class AlbumListScreen extends StatelessWidget {
             );
           }
           if (state is AlbumError) {
-            return Center(child: Text(state.message));
+            return Center(
+              child: Column(
+                spacing: 16,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(state.message, style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: Theme.of(context).colorScheme.error
+                  )),
+                  ElevatedButton(onPressed: () {
+                      print('Clicked');
+                      context.read<AlbumBloc>().add(FetchAlbums());
+                    },
+                      child: Text('Retry')
+                  )
+                ],
+              )
+            );
           }
           return Container();
         }

@@ -1,10 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'album_event.dart';
 import 'album_state.dart';
-import '../../data/network/retrofit_service.dart';
-import '../../data/models/album.dart';
-import '../../data/models/photo.dart';
-import '../../data/models/user.dart';
+import '../../data/network/api_service.dart';
 
 class AlbumBloc extends Bloc<AlbumEvent, AlbumState> {
   final ApiService apiService;
