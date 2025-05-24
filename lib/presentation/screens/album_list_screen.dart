@@ -44,7 +44,6 @@ class AlbumListScreen extends StatelessWidget {
                     color: Theme.of(context).colorScheme.error
                   )),
                   ElevatedButton(onPressed: () {
-                      print('Clicked');
                       context.read<AlbumBloc>().add(FetchAlbums());
                     },
                       child: Text('Retry')
